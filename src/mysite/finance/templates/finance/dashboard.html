@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/> 
+  
+  <!-- Custom CSS -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body class="top-bg-color">
+
+<div class="col-sm-2 affix-sidebar">
+     <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#" title="Home" rel="home">
+                Sidebar Menu
+            </a>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav nav-stacked" id="menu-bar">
+              <li><a href="#">Reports</a></li>   
+              <li><a href="{% url 'transaction' %}">Transactions</a></li>
+              <li><a href="#">Reminders</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="clearfix"></div>
+</div>
+
+<div class="col-md-10 top-buffer">
+<div class="container">
+  <div class="row ">
+      <div class = "col-md-6 ci_ads rounded" >
+        <div class="col-md-12 ">
+      	   <div class="ci_banner_txt">
+                <p> Hi Welcome<p>
+          </div>
+        </div>
+      </div>
+      <div class = "col-md-6">
+        <div class="col-md-12  summary_css panel panel-default">
+              <div class="panel-heading panel-heading-custom">
+                    <h3 class="panel-title">Account Summary</h3>
+              </div>
+              <div class="panel-body">     
+              <table class="table table-responsive">
+                  <tbody>
+                    <tr>
+                        <td>Net Worth</td> 
+                        <td> {{dashboard_details.net_worth}} </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Saved</td>
+                        <td> {{dashboard_details.savings}} </td>
+                    </tr>
+                    <tr> 
+                        <td>Income</td>
+                        <td> {{dashboard_details.total_income}} </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Expense</td>
+                        <td> {{dashboard_details.total_expense}} </td> 
+                    </tr>
+                     
+                  </tbody>
+                
+              </table>
+              </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container ">
+  <div class="row top-buffer">
+    <div class="row" >   
+
+      <div style="height:400px" class="col-md-6 rounded">      
+                <div class="col-md-6">
+                    <table class="table">
+                      <tbody>
+                          <tr> 
+                              <td>EXPENSE </td>
+                              <td>INCOME </td>
+                              <td>NET WORTH </td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top:30px" class = "col-md-6" >
+                    <table class="table">
+                      <tbody>
+                          <tr class="space_under"> 
+                              <td>EXPENSE IN THIS PERIOD </td>
+                          </tr>
+                          <tr class="space_under"> 
+                              <td><button> ADD EXPENSE </button></td>
+                          </tr>
+                          <tr class="space_under"> 
+                              <td><button> UPLOAD STATEMENT </button></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
+      </div>
+
+      <div class="col-md-6 ">
+              <div style="height:150px" class="col-md-12 rounded" >
+                 <h2>Reminders </h2>
+                 <button> Add Reminder </button>
+              </div>
+              <div style="margin-top:30px" class="col-md-12 rounded">
+                 <table class ="table"> 
+                    <thead>
+                        <tr>
+                            <th>COMPARE </th>
+                            <th>INCOME </th>
+                            <th>EXPENSE </th>
+                        </tr>                
+                    </thead>    
+                 </table>
+                 <div id="chart2" class="line-chart"></div>
+              </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

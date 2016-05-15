@@ -1,0 +1,132 @@
+.top-buffer { margin-top:20px; }
+
+.top-bg-color{
+	background-color: #F5F5F5
+}
+
+.dashboard-left-plane
+{
+	background-color: red;
+    border-radius: 5px;
+}
+
+#expense_button tr.space_under
+{
+	padding-top: .5em;
+    padding-bottom: 15px;
+}
+
+.rounded {
+  border-radius: 2px;
+  background: white; // without a background or border applied you won't be able to see if its rounded
+}
+
+.line-chart {
+  width:100%;
+  height:100px;
+}
+
+.modal-dialog{
+  width:60%;
+}
+
+@media (max-width: 767px) {
+  .content {
+    padding: 15px;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 768px) {
+
+  #menu-bar li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #navbar {
+    float: left;
+    width: 300px;
+    height: 100%;
+  }
+
+  .content {
+    margin-left: 300px;
+    min-height: 100%;
+  }
+
+  .container {
+    margin-left: 25px;
+  }
+}
+
+.modal-content {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.ci_modal_primary .modal-header {
+    background: #1b75bc;
+}
+
+.ci_modal_success .modal-header {
+    background: #39b54a;
+}
+
+.ci_modal_error .modal-header {
+    background: #dd3027;
+}
+
+
+.ci_ads {
+    padding: 0;
+    height: 400px;
+    font-family: 'OpenSansSemibold';
+    background: url('../img/banner_xs.png');
+    background-size: cover;
+    background-position: center top;
+}
+
+
+
+.ci_ads .ci_banner_txt {
+    padding: 70px;
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 43px;
+}
+
+
+.summary_css{
+  height: 400px;
+
+}
+
+.summary_header{
+  font-family: 'OpenSansSemibold';
+  background-color: blue;
+}
+
+.panel-default > .panel-heading-custom {
+    background: #ff0000; color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
