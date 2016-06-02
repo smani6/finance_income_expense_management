@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTHENTICATION_BACKENDS = ('finance.backends.MyCustomBackend','django.contrib.auth.backends.ModelBackend')
 
 # Application definition
 
@@ -79,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'test',
-        'USER': 'root1',
-        'PASSWORD':'root1',
+        'USER': 'postgres',
+        'PASSWORD':'pass',
         'HOST': 'psql-server',
         'PORT': 5432,
     }
@@ -105,3 +106,40 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': "%(asctime)s %(levelname)-8s %(module)s:%(lineno)s %(message)s",
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR + '/logs/consumerui_django.log',
+            'formatter': 'verbose'
+        },
+        'finance': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR + '/logs/finance.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'finance': {
+            'handlers': ['finance'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

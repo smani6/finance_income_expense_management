@@ -1,0 +1,1 @@
+insert into finance_account (first_name,last_name,username,email,password,phone_number) values ('ricky','rinsen','user1','user1@gmail.com','pass','1234567890');

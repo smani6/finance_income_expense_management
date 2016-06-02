@@ -1,0 +1,7 @@
+pymongo==3.0.3
+flask==0.10.1
+flask-api
+flask-restful==0.3.4
+django==1.8.6
+uwsgi
+sqlalchemy
